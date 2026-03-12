@@ -1,0 +1,26 @@
+- id: apiiro-fast-scan
+  name: Apiiro Fast Scan (Secrets + OSS)
+  description: Scan staged files for secrets and OSS vulnerabilities using Apiiro
+  entry: hooks/pre-commit-entry.sh fast-scan all --staged
+  language: script
+  pass_filenames: true
+  types: [file]
+  stages: [pre-commit]
+
+- id: apiiro-secrets-scan
+  name: Apiiro Secrets Scan
+  description: Scan staged files for secrets (API keys, passwords, tokens, etc.)
+  entry: hooks/pre-commit-entry.sh fast-scan secrets --staged
+  language: script
+  pass_filenames: true
+  types: [file]
+  stages: [pre-commit]
+
+- id: apiiro-oss-scan
+  name: Apiiro OSS Scan
+  description: Scan staged dependency files for OSS vulnerabilities
+  entry: hooks/pre-commit-entry.sh fast-scan oss --staged
+  language: script
+  pass_filenames: true
+  types: [file]
+  stages: [pre-commit]
