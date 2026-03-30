@@ -1,12 +1,12 @@
 ---
 name: apiiro-guardian
 description: |
-  Apiiro CLI commands for querying the Guardian AI agent: ask security questions, get analysis and insights about a repository, and manage repository detection. Use this skill whenever the user wants AI-powered security analysis, threat modeling, security posture review, or wants to ask questions about their codebase's security. Also trigger when they need deep analysis of authentication flows, attack surfaces, or want an AI to explain security concepts. Even without mentioning "apiiro" or "guardian", trigger when the user asks for AI-driven security insights or wants to query an AI agent about their repository.
+  Apiiro CLI commands for querying the Guardian AI agent: ask security questions, get analysis and insights about a repository, and manage repository detection. Use this skill whenever the user wants AI-powered security analysis, security posture review, or wants to ask questions about their codebase's security. Also trigger when they need deep analysis of authentication flows, attack surfaces, or want an AI to explain security concepts. Even without mentioning "apiiro" or "guardian", trigger when the user asks things like "is this code secure?", "what's the attack surface here?", or "explain this vulnerability". For dedicated STRIDE threat modeling of a design or feature spec, use the apiiro-threat-model skill instead. For fixing a known risk, use apiiro-fix.
 ---
 
 # Apiiro Guardian
 
-Query Apiiro's AI agent via the CLI. Authenticate first with `apiiro login` or set `API_KEY` env var.
+Ask security questions and get AI-powered analysis about your repository.
 
 ## Query
 

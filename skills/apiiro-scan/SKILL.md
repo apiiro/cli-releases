@@ -1,12 +1,12 @@
 ---
 name: apiiro-scan
 description: |
-  Apiiro CLI commands for security scanning: fast-scan for secrets and OSS vulnerabilities, diff-scan for comparing git references in CI/CD, and pre-commit hooks. Use this skill whenever the user mentions scanning code, secrets detection, OSS vulnerabilities, pre-commit hooks, CI/CD security gates, diff scanning, or wants to check files for security issues before committing. Even if the user doesn't say "apiiro", trigger this skill when they want to scan for secrets, check dependencies for vulnerabilities, or integrate security scanning into their workflow.
+  Apiiro CLI commands for security scanning: fast-scan for secrets and OSS vulnerabilities, diff-scan for comparing git references in CI/CD, and pre-commit hooks. Use this skill whenever the user mentions scanning code, secrets detection, OSS vulnerabilities, pre-commit hooks, CI/CD security gates, diff scanning, or wants to check files for security issues before committing. Even if the user doesn't say "apiiro", trigger when they say things like "scan for secrets", "check my code before I push", "are there any leaked credentials", "check dependencies for vulnerabilities", or want to set up security scanning in their workflow.
 ---
 
 # Apiiro Scan
 
-Security scanning via the Apiiro CLI. Authenticate first with `apiiro login` or set `API_KEY` env var.
+Security scanning via the Apiiro CLI.
 
 ## Fast Scan
 
@@ -21,7 +21,7 @@ apiiro fast-scan all                              # Both concurrently
 apiiro fast-scan config                           # Get scan configuration
 ```
 
-Options: `--staged`, `--timeout <ms>` (default: 2000), `-o, --output <json|text>`, `-f, --file <path>`.
+Options: `--staged`, `--full` (scan entire file, not just git-changed lines), `--timeout <ms>` (default: 2000), `-o, --output <json|text>`, `-f, --file <path>`.
 
 Exit codes: 0 = clean, 1 = high/critical risks found.
 

@@ -1,12 +1,12 @@
 ---
 name: apiiro-risks
 description: |
-  Apiiro CLI commands for risk management and remediation: list, inspect, and remediate known risks in a repository. Use this skill whenever the user asks about security risks, vulnerabilities, findings, or risk remediation in their repository. Also trigger when they want to list, filter, or investigate risks by category or severity, or need guidance on fixing a specific security finding. Even without mentioning "apiiro", trigger when the user wants a risk report, asks "what risks does this repo have", or wants to remediate a security issue.
+  Apiiro CLI commands for viewing and inspecting risks in a repository: list, filter, and get details on known risks. Use this skill whenever the user asks about security risks, vulnerabilities, or findings in their repository. Also trigger when they want to list, filter, or investigate risks by category or severity. Even without mentioning "apiiro", trigger when the user asks things like "what risks does this repo have", "any vulnerabilities here?", "show me the security findings", or "what's the risk level of this project". For fixing or remediating risks, use the apiiro-fix skill instead.
 ---
 
 # Apiiro Risks
 
-Risk management via the Apiiro CLI. Authenticate first with `apiiro login` or set `API_KEY` env var.
+View and inspect risks via the Apiiro CLI.
 
 ## List Risks
 
@@ -29,20 +29,6 @@ Filters: `--risk-level`, `--risk-category`, `--risk-insight`, `--finding-categor
 apiiro risks get <risk-id>
 apiiro risks get <risk-id> -o json
 ```
-
-## Remediate a Risk
-
-Try static remediation first. If not available, fall back to Guardian.
-
-```bash
-# Step 1: Get structured remediation prompt
-apiiro risks remediate <risk-id>
-
-# Step 2: If is_prompt is false (no automated fix), ask Guardian
-apiiro guardian query "how do I remediate risk <risk-id>?" --timeout 120
-```
-
-When using `-o json`, check the `is_prompt` field: `true` means an actionable prompt was returned, `false` means automated remediation is not available for that risk category.
 
 ## Global Options
 
