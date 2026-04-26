@@ -1,0 +1,13 @@
+{
+    "name": "apiiro",
+    "owner": {
+        "name": "Apiiro"
+    },
+    "plugins": [
+        {
+            "name": "apiiro",
+            "source": "apiiro",
+            "description": "Apiiro security plugin: scan for risks, secrets, and vulnerabilities"
+        }
+    ]
+}

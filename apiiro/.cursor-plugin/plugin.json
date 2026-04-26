@@ -1,0 +1,9 @@
+{
+    "name": "apiiro",
+    "description": "Apiiro security: skills, commands, and hooks. All hooks are on by default — disable with `apiiro hooks config disable`.",
+    "version": "1.3.0",
+    "author": {
+        "name": "Apiiro"
+    },
+    "hooks": "hooks/hooks.json"
+}

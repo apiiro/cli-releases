@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "apiiro",
+  "version": "1.3.1",
+  "description": "Apiiro security plugins for Claude Code",
+  "owner": {
+    "name": "Apiiro"
+  },
+  "plugins": [
+    {
+      "name": "apiiro",
+      "description": "Apiiro security plugin: skills, prompt enrichment, and pre-commit scanning",
+      "source": "./claude",
+      "category": "security"
+    }
+  ]
+}
