@@ -20,6 +20,10 @@ apiiro diff-scan -i                               # Interactive mode
 
 Exit codes: 0 = success/warn, 1 = blocked/failed, 2 = scan still pending.
 
+## Wait & Timeout
+
+`--wait` polls until results land. `--timeout <seconds>` bounds the wait (default: 300). When the timeout elapses, exit code 2 is returned along with the scan ID so the user can re-check later with `-s <scan-id>`.
+
 ## Global Options
 
 `-o, --output <json|text>`, `-f, --file <path>`, `--no-color`.

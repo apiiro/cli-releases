@@ -50,7 +50,7 @@ Download `apiiro-win.exe` from https://github.com/apiiro/marketplace/releases
 
 ## 4. Check version compatibility
 
-- Compare installed version (`apiiro --version`) with minimum required version 1.2.0
+- Compare installed version (`apiiro --version`) with minimum required version 1.4.2
 - If older, upgrade using the same method used to install
 
 ## 5. Check available features
